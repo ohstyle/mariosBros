@@ -24,7 +24,7 @@ loadSprite('unboxed','blockNormal.png')
 loadSprite('blueBlock','blueBlock.png')
 loadSprite('blueBrick','blueBrick.png')
 loadSprite('blueEvilMushroom','blueEvilMushroom.png')
-loadSprite('blueSteel','bluesteel.png')
+// loadSprite('blueSteel','bluesteel.png')
 loadSprite('blueSurprise','blueSurprise.png')
 
 
@@ -85,7 +85,7 @@ const levelCfg = {
     '€': [sprite('blueBrick'), solid(), scale(0.5)],
     'z': [sprite('blueEvilMushroom'), solid(), scale(0.5),'dangerous'],
     '@': [sprite('blueSurprise'), solid(), scale(0.5),'coin-surprise'],
-    'x': [sprite('blueSteel'), solid(), scale(0.5)],
+    // 'x': [sprite('blueSteel'), solid(), scale(0.5)],
 
 
 
