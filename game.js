@@ -24,7 +24,7 @@ loadSprite('unboxed','blockNormal.png')
 loadSprite('blueBlock','blueBlock.png')
 loadSprite('blueBrick','blueBrick.png')
 loadSprite('blueEvilMushroom','blueEvilMushroom.png')
-// loadSprite('blueSteel','bluesteel.png')
+loadSprite('blueSteel','blueSteel.png')
 loadSprite('blueSurprise','blueSurprise.png')
 
 
@@ -44,29 +44,30 @@ scene("game", ({level, score}) => {
     layers(['bg','obj', 'ui'],'obj')
 const maps = [
     [  
-    '                                  ',
-    '                                  ',
-    '                                  ',
-    '                                  ',
-    '                                  ',
-    '                                  ',
-    '    ?  =-=?=                      ',
-    '                                  ',
-    '                 ^   ^     ()     ',
-    '===========================  ==========='],
+    '=                                 = ',
+    '=                                 = ',
+    '=                                 = ',
+    '=                                 = ',
+    '=                                 = ',
+    '=                                 = ',
+    '=    ?  =-=?=                     = ',
+    '=                                 =',
+    '=                 ^   ^    ()     = ',
+    '===========================  ====== '
+],
 [
-    '€                                €',
-    '€                                €',
-    '€                                €',
-    '€                                €',
-    '€                                €',
-    '€                                €',
-    '€      @@@@@@                    €',
-    '€                            (   €',
-    '€             z  z               €',
-    '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    '€                                       €',
+    '€                             x         €',
+    '€                            xx         €',
+    '€                         x  xx         €',
+    '€                         x  xx         €',
+    '€                     x   xxxxx  €( €   €',
+    '€      @@@@@@             xxxxx  €  €   €',
+    '€                      xxxxxxxx  €€€€€  €',
+    '€             z  zxxx         $  €€€€$  €',
+    '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
                                      
-]
+],
 ]
 // level configuration--------------------------------------------------
 const levelCfg = {
@@ -85,20 +86,15 @@ const levelCfg = {
     '€': [sprite('blueBrick'), solid(), scale(0.5)],
     'z': [sprite('blueEvilMushroom'), solid(), scale(0.5),'dangerous'],
     '@': [sprite('blueSurprise'), solid(), scale(0.5),'coin-surprise'],
-    // 'x': [sprite('blueSteel'), solid(), scale(0.5)],
+    'x': [sprite('blueSteel'), solid(), scale(0.5)],
 
-
-
-
-
-    
 };
 const gameLevel = addLevel(maps[level], levelCfg);
 
 // le player----------------------------------------------------------
 const player = add([
     sprite('marioBros'),solid(),
-    pos(10,0),
+    pos(30, 0),
     body(),
     big(),
     origin('bot')
