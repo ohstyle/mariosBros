@@ -85,7 +85,7 @@ const levelCfg = {
     '€': [sprite('blueBrick'), solid(), scale(0.5)],
     'z': [sprite('blueEvilMushroom'), solid(), scale(0.5),'dangerous'],
     '@': [sprite('blueSurprise'), solid(), scale(0.5),'coin-surprise'],
-    'x': [sprite('blueSteel'), solid(), scale(0.5),],
+    'x': [sprite('blueSteel'), solid(), scale(0.5)],
 
 
 
